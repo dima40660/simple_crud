@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="simple_crud_development@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.4">
+    <root id="1"/>
+    <database id="2" parent="1" name="simple_crud_development">
+      <ObjectId>17555</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12417</ObjectId>
+    </database>
+    <database id="4" parent="1" name="MaxiPass_development">
+      <ObjectId>16385</ObjectId>
+    </database>
+    <database id="5" parent="1" name="MaxiPass_test">
+      <ObjectId>16386</ObjectId>
+    </database>
+    <database id="6" parent="1" name="Investarena_API_development">
+      <ObjectId>16875</ObjectId>
+    </database>
+    <database id="7" parent="1" name="Investarena_API_test">
+      <ObjectId>16876</ObjectId>
+    </database>
+    <database id="8" parent="1" name="simple_crud_test">
+      <ObjectId>17556</ObjectId>
+    </database>
+    <schema id="9" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-11-27.09:16:05.944</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1012</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="10" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="11" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+    </schema>
+    <schema id="13" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="information_schema">
+      <ObjectId>12125</ObjectId>
+    </schema>
+    <sequence id="15" parent="9" name="tasks_id_seq">
+      <ObjectId>17573</ObjectId>
+      <StateNumber>1012</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="16" parent="9" name="ar_internal_metadata">
+      <ObjectId>17565</ObjectId>
+      <StateNumber>1011</StateNumber>
+    </table>
+    <table id="17" parent="9" name="schema_migrations">
+      <ObjectId>17557</ObjectId>
+      <StateNumber>1010</StateNumber>
+    </table>
+    <table id="18" parent="9" name="tasks">
+      <ObjectId>17575</ObjectId>
+      <StateNumber>1012</StateNumber>
+    </table>
+    <column id="19" parent="16" name="key">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1011</StateNumber>
+    </column>
+    <column id="20" parent="16" name="value">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>1011</StateNumber>
+    </column>
+    <column id="21" parent="16" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1011</StateNumber>
+    </column>
+    <column id="22" parent="16" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1011</StateNumber>
+    </column>
+    <index id="23" parent="16" name="ar_internal_metadata_pkey">
+      <ObjectId>17571</ObjectId>
+      <ColNames>key</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="24" parent="16" name="ar_internal_metadata_pkey">
+      <ObjectId>17572</ObjectId>
+      <ColNames>key</ColNames>
+      <UnderlyingIndexName>ar_internal_metadata_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="25" parent="17" name="version">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1010</StateNumber>
+    </column>
+    <index id="26" parent="17" name="schema_migrations_pkey">
+      <ObjectId>17563</ObjectId>
+      <ColNames>version</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="27" parent="17" name="schema_migrations_pkey">
+      <ObjectId>17564</ObjectId>
+      <ColNames>version</ColNames>
+      <UnderlyingIndexName>schema_migrations_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="28" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1012</StateNumber>
+      <SequenceName>tasks_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;tasks_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="29" parent="18" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>1012</StateNumber>
+    </column>
+    <column id="30" parent="18" name="description">
+      <Position>3</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>1012</StateNumber>
+    </column>
+    <column id="31" parent="18" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1012</StateNumber>
+    </column>
+    <column id="32" parent="18" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1012</StateNumber>
+    </column>
+    <index id="33" parent="18" name="tasks_pkey">
+      <ObjectId>17582</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="34" parent="18" name="tasks_pkey">
+      <ObjectId>17583</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>tasks_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
