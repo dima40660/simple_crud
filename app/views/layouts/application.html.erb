@@ -10,5 +10,6 @@
 
   <body>
     <%= yield %>
+    <%= link_to('LogOut', destroy_user_session_path, method: :delete) %>
   </body>
 </html>
